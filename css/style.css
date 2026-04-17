@@ -1401,8 +1401,8 @@ a.move-top span {
 
     .gal-img {
         padding: 10px;
-        float: left;
-        width: 50%;
+        /* float: left;
+        width: 50%; */
     }
 
     .footer-top-inner-world {
@@ -1594,79 +1594,4 @@ a.move-top span {
     .about-text-grid1 h3 {
         font-size: 1.5em;
     }
-}
-
-
-/* payment-section */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  text-align: center;
-}
-
-.payment-container {
-  padding: 20px;
-}
-
-.card {
-  max-width: 350px;
-  margin: 20px auto;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background: #fff;
-}
-
-.card-header {
-  background: #5f259f;
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  background: white;
-  color: #5f259f;
-  border-radius: 50%;
-  padding: 5px 10px;
-  font-weight: bold;
-}
-
-.brand {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.card-body {
-  padding: 15px;
-}
-
-.qr {
-  width: 100%;
-  max-width: 250px;
-  margin: 10px 0;
-}
-
-.upi {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.upi-logos {
-  margin: 10px 0;
-  font-weight: bold;
-}
-
-.footer-btn {
-  background: linear-gradient(to right, #1e73e8, #2a5bd7);
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  max-width: 350px;
-  margin: 20px auto;
-  font-size: 16px;
 }
