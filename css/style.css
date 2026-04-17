@@ -915,14 +915,17 @@ section#gallery {
 }
 
 .gal-img {
-    padding: 10px;
+    padding: 0;
 }
 
 .gal-img img {
-    border-radius: 0;
+    /* border-radius: 0;
     -moz-transition: 0.5s all;
     transition: 0.5s all;
-    margin-bottom: 1.1em;
+    margin-bottom: 10px; */
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .gal-img:hover.gal-img img {
@@ -1592,6 +1595,3 @@ a.move-top span {
         font-size: 1.5em;
     }
 }
-
-/*-- //Responsive design --*/
-Working...
