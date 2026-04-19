@@ -408,7 +408,7 @@ li>a:only-child:after {
 }
 
 .banner-info-layouts {
-    padding-top: 23em;
+    padding-top: 15em;
     text-align: center;
 }
 
@@ -1402,6 +1402,10 @@ a.move-top span {
 
 
 @media screen and (max-width:768px) {
+    .team-grids:hover div.team-info {
+        width: 100%;
+    }
+
     .tab-wrap {
         padding: 2em 0em;
     }
@@ -1505,7 +1509,7 @@ a.move-top span {
 
 @media screen and (max-width: 640px) {
     .banner-info-layouts {
-        padding-top: 13em;
+        padding-top: 1em;
     }
 
     .main-content,
@@ -1539,6 +1543,10 @@ a.move-top span {
 }
 
 @media screen and (max-width: 480px) {
+    .team-grids:hover div.team-info {
+        width: 100%;
+    }
+
     .tab-main label {
         padding: 10px 20px;
         font-size: 0.8em;
