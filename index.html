@@ -243,17 +243,20 @@
                     <div class="row">
                         <div class="col-sm-4 col-6">
                             <p class="text-li">Branches</p>
-                            <h4 class="text-wh"> 3+</h4>
+                            <!-- <h4 class="text-wh"> 3+</h4> -->
+                            <h4 class="counter text-wh" data-target="3">0</h4>
                             <span class="fa fa-files-o mr-2"></span>
                         </div>
                         <div class="col-sm-4 col-6">
                             <p>Working Staff</p>
-                            <h4>25+</h4>
+                            <!-- <h4>25+</h4> -->
+                            <h4 class="counter" data-target="25">0</h4>
                             <span class="fa fa-tasks mr-2"></span>
                         </div>
                         <div class="col-sm-4 col-6 mt-sm-0 mt-5">
                             <p>Total Students</p>
-                            <h4>500+</h4>
+                            <!-- <h4>500+</h4> -->
+                            <h4 class="counter" data-target="500">0</h4>
                             <span class="fa fa-users mr-2"></span>
                         </div>
                     </div>
@@ -693,6 +696,38 @@
         function showFeePage() {
             document.getElementById("payment-container").style.display = "block";
         }
+
+        // stats
+        const counters = document.querySelectorAll('.counter');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+
+                        const increment = target / 100;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 25);
+                        } else {
+                            counter.innerText = target + "+";
+                        }
+                    };
+
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
     </script>
 
 
