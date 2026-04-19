@@ -20,8 +20,55 @@
 
     </script>
 
+    <style>
+        @keyframes scrollHorizontal {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .scroll-slider-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background: #f8f9fa;
+            padding: 40px 0;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+
+        .scroll-slider {
+            display: flex;
+            animation: scrollHorizontal 20s linear infinite;
+        }
+
+        .scroll-slider-item {
+            flex-shrink: 0;
+            width: 300px;
+            height: 250px;
+            margin: 0 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-slider-item:hover {
+            transform: scale(1.05);
+        }
+
+        .scroll-slider-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
     <!-- //Meta tag Keywords -->
-     <link rel="stylesheet" href="/payment-container.html">
+    <link rel="stylesheet" href="/payment-container.html">
     <!-- Style-CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -96,7 +143,7 @@
                             </li>
                             <li><a href="#testimonials" class="scroll">Testimonials</a></li>
                             <li><a href="#contact" class="scroll">Contact</a></li>
-                            <li><a href="/payment-container.html" >Online Fee
+                            <li><a href="/payment-container.html">Online Fee
                                     Payment</a></li>
                         </ul>
                     </nav>
@@ -291,24 +338,52 @@
                 <div class="col-md-4 gal-img">
                     <a href="#gal6"><img src="images/g6.jpeg" alt="news image" class="img-fluid"></a>
                 </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#gal7"><img src="images/g7.jpeg" alt="news image" class="img-fluid"></a>
+            </div>
+
+            <!-- Scrolling Image Slider -->
+            <div class="scroll-slider-wrapper">
+                <div class="scroll-slider">
+                    <div class="scroll-slider-item">
+                        <img src="images/g7.jpeg" alt="Gallery Image 7">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g8.jpeg" alt="Gallery Image 8">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g9.jpeg" alt="Gallery Image 9">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g10.jpeg" alt="Gallery Image 10">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g11.jpeg" alt="Gallery Image 11">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g12.jpeg" alt="Gallery Image 12">
+                    </div>
+                    <!-- Duplicate images for continuous scroll -->
+                    <div class="scroll-slider-item">
+                        <img src="images/g7.jpeg" alt="Gallery Image 7">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g8.jpeg" alt="Gallery Image 8">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g9.jpeg" alt="Gallery Image 9">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g10.jpeg" alt="Gallery Image 10">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g11.jpeg" alt="Gallery Image 11">
+                    </div>
+                    <div class="scroll-slider-item">
+                        <img src="images/g12.jpeg" alt="Gallery Image 12">
+                    </div>
                 </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#gal8"><img src="images/g8.jpeg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#gal9"><img src="images/g9.jpeg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#ga20"><img src="images/g10.jpeg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#ga21"><img src="images/g11.jpeg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#ga22"><img src="images/g12.jpeg" alt="news image" class="img-fluid"></a>
-                </div>
+            </div>
+
+            <div class="row news-grids text-center gallery-wrap">
             </div>
 
             <!-- popup-->
