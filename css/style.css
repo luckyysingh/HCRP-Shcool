@@ -72,7 +72,7 @@ ul {
 /* CSS Document */
 
 header {
-    position: absolute;
+    /* position: absolute; */
     z-index: 9;
     width: 100%;
 }
@@ -576,6 +576,15 @@ a.read-more {
     position: relative;
     margin: 8em auto;
     padding: 3em 1em;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .popup p {
@@ -921,7 +930,9 @@ section#gallery {
 }
 
 .gal-img {
-    padding: 0;
+    padding: 10px;
+    overflow: hidden;
+    height: 250px; 
 }
 
 .gal-img img {
@@ -930,8 +941,10 @@ section#gallery {
     transition: 0.5s all;
     margin-bottom: 10px; */
     width: 100%;
+    height: 100%;
     display: block;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .gal-img:hover.gal-img img {
