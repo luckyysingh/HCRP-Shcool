@@ -23,10 +23,11 @@ const observer = new IntersectionObserver(entries => {
                 const count = +counter.innerText;
 
                 const increment = target / 100;
+                const speed = counter.hasAttribute('data-slow') ? 100 : 30;
 
                 if (count < target) {
                     counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCount, 20);
+                    setTimeout(updateCount, speed);
                 } else {
                     counter.innerText = target + "+";
                 }
